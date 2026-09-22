@@ -11,7 +11,7 @@
 - [x] Выбор инфраструктуры — Supabase ([docs/infrastructure_decision.md](docs/infrastructure_decision.md))
 - [x] Развёртывание базы данных (миграции, RLS) — проект Supabase, применены миграции 0001-0003
 - [x] REST API endpoints ([docs/api_reference.md](docs/api_reference.md)) — PostgREST + RPC-функции
-- [ ] Аутентификация и Row Level Security
+- [x] Аутентификация и Row Level Security ([docs/authentication.md](docs/authentication.md)) — телефон + OTP, RLS-политики, секреты
 - [ ] Интеграция фронтенда с бэкендом
 
 ## Технологии
@@ -38,7 +38,8 @@
 ├── docs/
 │   ├── database_schema.md          # Схема БД: сущности, связи, индексы
 │   ├── infrastructure_decision.md  # Выбор инфраструктуры (Supabase) и обоснование
-│   └── api_reference.md            # Справочник API endpoints и примеров запросов
+│   ├── api_reference.md            # Справочник API endpoints и примеров запросов
+│   └── authentication.md           # Аутентификация (телефон + OTP), роли, секреты, CORS
 └── supabase/
     └── migrations/               # SQL-миграции схемы БД
 ```
@@ -49,3 +50,4 @@
 - [docs/database_schema.md](docs/database_schema.md) — схема базы данных
 - [docs/infrastructure_decision.md](docs/infrastructure_decision.md) — выбор инфраструктурного решения (Supabase) и обоснование
 - [docs/api_reference.md](docs/api_reference.md) — справочник API endpoints, примеры запросов, отчёт о тестировании
+- [docs/authentication.md](docs/authentication.md) — аутентификация (телефон + OTP), роли, защита секретов, CORS
