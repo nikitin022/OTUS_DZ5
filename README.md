@@ -10,7 +10,7 @@
 - [x] Схема базы данных PostgreSQL ([docs/database_schema.md](docs/database_schema.md))
 - [x] Выбор инфраструктуры — Supabase ([docs/infrastructure_decision.md](docs/infrastructure_decision.md))
 - [x] Развёртывание базы данных (миграции, RLS) — проект Supabase, применены миграции 0001-0003
-- [ ] REST API endpoints
+- [x] REST API endpoints ([docs/api_reference.md](docs/api_reference.md)) — PostgREST + RPC-функции
 - [ ] Аутентификация и Row Level Security
 - [ ] Интеграция фронтенда с бэкендом
 
@@ -37,7 +37,8 @@
 │   └── api/                      # Контракт ApiClient и хуки
 ├── docs/
 │   ├── database_schema.md          # Схема БД: сущности, связи, индексы
-│   └── infrastructure_decision.md  # Выбор инфраструктуры (Supabase) и обоснование
+│   ├── infrastructure_decision.md  # Выбор инфраструктуры (Supabase) и обоснование
+│   └── api_reference.md            # Справочник API endpoints и примеров запросов
 └── supabase/
     └── migrations/               # SQL-миграции схемы БД
 ```
@@ -47,3 +48,4 @@
 - `technical_specification.md` — требования, модель данных (раздел 7), контракт API (раздел 8)
 - [docs/database_schema.md](docs/database_schema.md) — схема базы данных
 - [docs/infrastructure_decision.md](docs/infrastructure_decision.md) — выбор инфраструктурного решения (Supabase) и обоснование
+- [docs/api_reference.md](docs/api_reference.md) — справочник API endpoints, примеры запросов, отчёт о тестировании
