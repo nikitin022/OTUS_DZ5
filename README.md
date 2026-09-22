@@ -7,7 +7,9 @@
 ## Статус
 
 - [x] Контракт API и модели данных (`src/api`, `src/types`)
-- [ ] База данных PostgreSQL (Supabase)
+- [x] Схема базы данных PostgreSQL ([docs/database_schema.md](docs/database_schema.md))
+- [x] Выбор инфраструктуры — Supabase ([docs/infrastructure_decision.md](docs/infrastructure_decision.md))
+- [ ] Развёртывание базы данных (миграции, RLS)
 - [ ] REST API endpoints
 - [ ] Аутентификация и Row Level Security
 - [ ] Интеграция фронтенда с бэкендом
@@ -22,6 +24,8 @@
 | Миграции | SQL-миграции в `supabase/migrations` |
 | Фронтенд | React 18 + TypeScript + Vite (PWA) |
 
+Инфраструктурное решение (Supabase / BaaS против self-hosted PostgreSQL) зафиксировано и обосновано в [docs/infrastructure_decision.md](docs/infrastructure_decision.md).
+
 ## Структура репозитория
 
 ```
@@ -32,7 +36,8 @@
 │   ├── types/                    # Модели данных (Донор, Центр, Заявка, ...)
 │   └── api/                      # Контракт ApiClient и хуки
 ├── docs/
-│   └── database_schema.md        # Схема БД: сущности, связи, индексы
+│   ├── database_schema.md          # Схема БД: сущности, связи, индексы
+│   └── infrastructure_decision.md  # Выбор инфраструктуры (Supabase) и обоснование
 └── supabase/
     └── migrations/               # SQL-миграции схемы БД
 ```
@@ -40,4 +45,5 @@
 ## Документация
 
 - `technical_specification.md` — требования, модель данных (раздел 7), контракт API (раздел 8)
-- `docs/database_schema.md` — схема базы данных
+- [docs/database_schema.md](docs/database_schema.md) — схема базы данных
+- [docs/infrastructure_decision.md](docs/infrastructure_decision.md) — выбор инфраструктурного решения (Supabase) и обоснование
