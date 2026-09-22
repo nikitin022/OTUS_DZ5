@@ -9,7 +9,7 @@
 - [x] Контракт API и модели данных (`src/api`, `src/types`)
 - [x] Схема базы данных PostgreSQL ([docs/database_schema.md](docs/database_schema.md))
 - [x] Выбор инфраструктуры — Supabase ([docs/infrastructure_decision.md](docs/infrastructure_decision.md))
-- [ ] Развёртывание базы данных (миграции, RLS)
+- [x] Развёртывание базы данных (миграции, RLS) — проект Supabase, применены миграции 0001-0003
 - [ ] REST API endpoints
 - [ ] Аутентификация и Row Level Security
 - [ ] Интеграция фронтенда с бэкендом
