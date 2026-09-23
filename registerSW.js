@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/OTUS_DZ5/sw.js', { scope: '/OTUS_DZ5/' })})}
