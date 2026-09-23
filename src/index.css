@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Дизайн-токены концепции Minimalist (Tailwind CSS v4).
+  Контрастные пары background/ink и primary-700/white дают соотношение >= 4.5:1 (NFR-9).
+*/
+@theme {
+  --color-primary-50: #f0fdfa;
+  --color-primary-100: #ccfbf1;
+  --color-primary-200: #99f6e4;
+  --color-primary-300: #5eead4;
+  --color-primary-400: #2dd4bf;
+  --color-primary-500: #14b8a6;
+  --color-primary-600: #0d9488;
+  --color-primary-700: #0f766e;
+  --color-primary-800: #115e59;
+  --color-primary-900: #134e4a;
+
+  --color-danger-600: #dc2626;
+
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-ink-900: #0f172a;
+  --color-ink-600: #475569;
+
+  --font-sans:
+    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    sans-serif;
+
+  --radius-card: 0.75rem;
+}
+
+@layer base {
+  html {
+    @apply bg-background text-ink-900 antialiased;
+  }
+
+  body {
+    @apply font-sans;
+  }
+
+  /* Видимый фокус для навигации с клавиатуры (NFR-10) */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-700;
+  }
+
+  /* Мобильные браузеры: без серых вспышек при тапе */
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/*
+  Адаптивное поведение полей ввода: на экранах < 640px принудительно 16px,
+  иначе iOS Safari увеличивает страницу при фокусе на поле с font-size 14px.
+  На десктопе остаётся типографика компонента (text-sm).
+*/
+@media (max-width: 639px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}

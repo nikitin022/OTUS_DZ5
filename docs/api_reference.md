@@ -24,7 +24,7 @@ REST API генерируется автоматически (PostgREST) из с
 | `updateAppointment(id, patch)` | `PATCH /rest/v1/appointments?id=eq.<id>` | донор — владелец (RLS) |
 | `getDonationHistory(donorId)` | `GET /rest/v1/donation_history?donor_id=eq.<id>` | донор — владелец (RLS) |
 | `getRequestResponses(requestId)` | `GET /rest/v1/request_responses?request_id=eq.<id>` | гость, донор, координатор |
-| `subscribeToPush(...)` | Шаг «Безопасность»: требует Auth/Web Push, вынесен отдельно | донор |
+| `subscribeToPush(subscription)` | `POST /rest/v1/rpc/register_push_subscription` | донор (миграция 0007) |
 
 Дополнительная RPC-операция: `POST /rest/v1/rpc/register_donor_profile` — создание профиля донора после входа (FR-1).
 
@@ -164,6 +164,6 @@ curl -X PATCH "https://<project-ref>.supabase.co/rest/v1/appointments?id=eq.<uui
 
 ## 7. Открытые вопросы
 
-- `subscribeToPush` — реализуется вместе с аутентификацией и Web Push (Шаг «Безопасность»);
+- `subscribeToPush` — реализован: таблица `push_subscriptions` и RPC `register_push_subscription` (миграция 0007); фактическая отправка push через Web Push-провайдера — операционная настройка;
 - автообновление прогресса заявок (`collected_ml`) — по факту подтверждённых донаций, системный контур (`service_role`);
-- CORS: домен фронтенда (GitHub Pages) добавляется в настройках Auth/API проекта Supabase.
+- CORS: REST и Auth Supabase допускают браузерные запросы с publishable-ключом; Site URL/Redirect URLs для флоу OTP — домен GitHub Pages (см. docs/authentication.md, раздел 7).
