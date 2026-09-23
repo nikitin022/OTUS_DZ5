@@ -49,5 +49,11 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: './src/test/setup.ts',
+    // Тесты всегда выполняются на mock-слое: переменные окружения Supabase
+    // очищаются, чтобы unit-тесты не делали реальных сетевых вызовов
+    env: {
+      VITE_SUPABASE_URL: '',
+      VITE_SUPABASE_PUBLISHABLE_KEY: '',
+    },
   },
 });

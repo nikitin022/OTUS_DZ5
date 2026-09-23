@@ -1,4 +1,5 @@
-import { ApiError, type ApiClient, type RequestFilters } from '../ApiClient';
+import { ApiError, type ApiClient, RequestFilters } from '../ApiClient';
+import { toApiError } from '../errorMessages';
 import type {
   Appointment,
   BloodRequest,
@@ -22,10 +23,6 @@ import {
   type RequestResponseRow,
 } from './mappers';
 
-/** PostgrestError -> ApiError с человекочитаемым сообщением (матрица ошибок ТЗ) */
-function toApiError(error: { message: string; code?: string }): ApiError {
-  return new ApiError(error.message, error.code ?? 'API_ERROR');
-}
 
 function requireClient() {
   if (!supabase) {

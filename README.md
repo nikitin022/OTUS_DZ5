@@ -15,6 +15,7 @@
 - [x] REST API endpoints ([docs/api_reference.md](docs/api_reference.md)) — PostgREST + RPC-функции
 - [x] Аутентификация и Row Level Security ([docs/authentication.md](docs/authentication.md)) — телефон + OTP, RLS-политики, секреты
 - [x] Интеграция фронтенда с бэкендом — `SupabaseApiClient` заменяет mock-слой
+- [x] Обработка ошибок и логирование ([docs/logging.md](docs/logging.md)) — единый маппинг ошибок, логи Supabase
 
 ## Технологии
 
@@ -130,4 +131,5 @@ npm run deploy   # build:pages + публикация dist в gh-pages
 - [docs/infrastructure_decision.md](docs/infrastructure_decision.md) — выбор инфраструктурного решения (Supabase) и обоснование
 - [docs/api_reference.md](docs/api_reference.md) — справочник API endpoints, примеры запросов, отчёт о тестировании
 - [docs/authentication.md](docs/authentication.md) — аутентификация (телефон + OTP), роли, защита секретов, CORS
+- [docs/logging.md](docs/logging.md) — логирование: источники логов Supabase, пример анализа, запросы для диагностики
 - `docs/frontend/` — проектная документация фронтенда (функциональные требования, отчёты о тестировании и разработке)
