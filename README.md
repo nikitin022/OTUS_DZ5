@@ -2,6 +2,8 @@
 
 Прогрессивное веб-приложение, которое показывает центры крови на интерактивной карте, ведёт живую ленту потребностей и помогает донорам записываться, когда в их городе нужна именно их группа крови.
 
+**Полная документация бэкенда:** [backend_documentation.md](backend_documentation.md)
+
 Проект развивается в двух частях:
 - **Frontend** — React + TypeScript PWA (карта, лента, профиль, запись на донацию);
 - **Backend** — управляемый PostgreSQL (Supabase): REST API, аутентификация по телефону с одноразовым кодом, Row Level Security, подписки на push-уведомления.
@@ -45,6 +47,16 @@
 Контракт и UI-компоненты при этом не меняются. Маппинг snake_case ↔ camelCase и структур данных — в `src/api/supabase/mappers.ts`.
 
 Бизнес-правила выполняются на стороне БД: запись на донацию — RPC `create_appointment` (интервал ≥ 60 дней, свободный слот, одна запись в день), профиль донора — RPC `register_donor_profile`, подписка на push — RPC `register_push_subscription`.
+
+## Скриншоты (живое приложение)
+
+| Карта центров | Живая лента |
+|---|---|
+| ![Карта центров](docs/screenshots/live-map.jpg) | ![Живая лента](docs/screenshots/live-feed.jpg) |
+
+| Карточка заявки | Профиль донора | Состояние ошибки |
+|---|---|---|
+| ![Заявка](docs/screenshots/live-request.jpg) | ![Профиль](docs/screenshots/live-profile.jpg) | ![Не найдено](docs/screenshots/live-request-notfound.jpg) |
 
 ## Быстрый старт
 
