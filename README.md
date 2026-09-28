@@ -16,6 +16,7 @@
 - [x] Аутентификация и Row Level Security ([docs/authentication.md](docs/authentication.md)) — телефон + OTP, RLS-политики, секреты
 - [x] Интеграция фронтенда с бэкендом — `SupabaseApiClient` заменяет mock-слой
 - [x] Обработка ошибок и логирование ([docs/logging.md](docs/logging.md)) — единый маппинг ошибок, логи Supabase
+- [x] Тестирование и отладка ([docs/testing_report.md](docs/testing_report.md)) — матрица покрытия, e2e, отчёт о проблемах
 
 ## Технологии
 
@@ -132,4 +133,5 @@ npm run deploy   # build:pages + публикация dist в gh-pages
 - [docs/api_reference.md](docs/api_reference.md) — справочник API endpoints, примеры запросов, отчёт о тестировании
 - [docs/authentication.md](docs/authentication.md) — аутентификация (телефон + OTP), роли, защита секретов, CORS
 - [docs/logging.md](docs/logging.md) — логирование: источники логов Supabase, пример анализа, запросы для диагностики
+- [docs/testing_report.md](docs/testing_report.md) — отчёт о тестировании и отладке
 - `docs/frontend/` — проектная документация фронтенда (функциональные требования, отчёты о тестировании и разработке)

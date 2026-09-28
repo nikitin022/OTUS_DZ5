@@ -13,21 +13,21 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: {
-        id: '/',
+        id: './',
         name: 'Капля — помощь донорам',
         short_name: 'Капля',
         description:
           'Карта центров крови, живая лента потребностей и уведомления для доноров',
         lang: 'ru',
-        start_url: '/',
+        start_url: './',
         display: 'standalone',
         background_color: '#f8fafc',
         theme_color: '#0f766e',
         icons: [
-          { src: '/icons/pwa-192.png', sizes: '192x192', type: 'image/png' },
-          { src: '/icons/pwa-512.png', sizes: '512x512', type: 'image/png' },
+          { src: 'icons/pwa-192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'icons/pwa-512.png', sizes: '512x512', type: 'image/png' },
           {
-            src: '/icons/pwa-512.png',
+            src: 'icons/pwa-512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
