@@ -1,5 +1,7 @@
 # Капля — PWA для доноров крови
 
+**Работающее приложение:** https://nikitin022.github.io/OTUS_DZ5/ · **Репозиторий:** https://github.com/nikitin022/OTUS_DZ5
+
 Прогрессивное веб-приложение, которое показывает центры крови на интерактивной карте, ведёт живую ленту потребностей и помогает донорам записываться, когда в их городе нужна именно их группа крови.
 
 **Полная документация бэкенда:** [backend_documentation.md](backend_documentation.md)
@@ -129,7 +131,7 @@ npm run deploy   # сборка для GitHub Pages (base=/OTUS_DZ5/) и пуб�
 
 ## Деплой
 
-Приложение хостится на GitHub Pages из ветки `gh-pages`:
+Приложение хостится на GitHub Pages из ветки `gh-pages` и доступно по адресу: **https://nikitin022.github.io/OTUS_DZ5/**
 
 ```bash
 npm run deploy   # build:pages + публикация dist в gh-pages
